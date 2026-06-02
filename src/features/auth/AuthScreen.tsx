@@ -73,51 +73,49 @@ export function AuthScreen() {
   }
 
   return (
-    <main className="relative flex min-h-svh flex-col overflow-hidden bg-bg px-6 py-10">
-      {/* Soft aurora glows in the background */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -top-24 -left-20 h-72 w-72 rounded-full bg-lilac/40 blur-3xl"
-      />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute top-1/3 -right-24 h-80 w-80 rounded-full bg-primary/30 blur-3xl"
-      />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -bottom-28 left-1/4 h-72 w-72 rounded-full bg-accent/40 blur-3xl"
-      />
+    <main className="relative flex min-h-svh flex-col bg-bg px-6 py-4">
+      {/* Soft aurora glows in the background (clipped to the viewport) */}
+      <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
+        <div className="absolute -top-24 -left-20 h-72 w-72 rounded-full bg-lilac/40 blur-3xl" />
+        <div className="absolute top-1/3 -right-24 h-80 w-80 rounded-full bg-primary/30 blur-3xl" />
+        <div className="absolute -bottom-28 left-1/4 h-72 w-72 rounded-full bg-accent/40 blur-3xl" />
+      </div>
 
-      <div className="relative z-10 mx-auto flex w-full max-w-sm flex-1 flex-col">
-        {/* Title */}
-        <header className="mt-6 mb-8 text-center">
-          <img
-            src={solUrl}
-            alt=""
-            aria-hidden
-            className="mx-auto -mb-1 w-20 select-none"
-            draggable={false}
-          />
-          <h1 className="font-display text-6xl leading-[0.85] text-ink">
-            Vox<br />Austral
-          </h1>
-          <p className="mt-4 font-mono text-sm text-ink-muted">
+      <div className="relative z-10 mx-auto flex w-full max-w-sm flex-1 flex-col justify-center">
+        {/* Title — stacked on mobile, horizontal on desktop */}
+        <header className="mb-5 text-center sm:mb-7">
+          <div className="flex flex-col items-center sm:flex-row sm:justify-center sm:gap-3">
+            <img
+              src={solUrl}
+              alt=""
+              aria-hidden
+              className="-mb-1 w-16 select-none sm:mb-0 sm:shrink-0"
+              draggable={false}
+            />
+            <h1 className="font-display leading-[0.85] text-ink text-5xl sm:text-[2.75rem] sm:leading-none">
+              <span className="sm:hidden">
+                Vox<br />Austral
+              </span>
+              <span className="hidden sm:inline">Vox Austral</span>
+            </h1>
+          </div>
+          <p className="mt-3 font-mono text-sm text-ink-muted">
             Tu aventura austral comienza acá.
           </p>
         </header>
 
         {/* Card */}
-        <section className="rounded-3xl border border-border bg-surface/80 p-6 shadow-sm backdrop-blur-sm">
+        <section className="rounded-3xl border border-border bg-surface/80 p-5 shadow-sm backdrop-blur-sm sm:p-6">
           <h2 className="mb-1 font-serif text-xl font-bold text-ink">
             {isSignUp ? 'Crear cuenta' : 'Iniciar sesión'}
           </h2>
-          <p className="mb-5 font-mono text-xs text-ink-muted">
+          <p className="mb-4 font-mono text-xs text-ink-muted">
             {isSignUp
               ? 'Sumate y empezá a jugar.'
               : 'Bienvenido de vuelta, viajero.'}
           </p>
 
-          <form onSubmit={handleSubmit} className="flex flex-col gap-4" noValidate>
+          <form onSubmit={handleSubmit} className="flex flex-col gap-3.5" noValidate>
             <TextField
               label="Correo"
               type="email"
@@ -155,7 +153,7 @@ export function AuthScreen() {
           </form>
 
           {/* Divider */}
-          <div className="my-5 flex items-center gap-3">
+          <div className="my-3 flex items-center gap-3">
             <span className="h-px flex-1 bg-border" />
             <span className="font-mono text-xs text-ink-muted">o</span>
             <span className="h-px flex-1 bg-border" />
@@ -168,7 +166,7 @@ export function AuthScreen() {
         </section>
 
         {/* Toggle */}
-        <p className="mt-6 text-center font-mono text-xs text-ink-muted">
+        <p className="mt-4 text-center font-mono text-xs text-ink-muted">
           {isSignUp ? '¿Ya tenés cuenta?' : '¿Todavía no tenés cuenta?'}{' '}
           <button
             type="button"
