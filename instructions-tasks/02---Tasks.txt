@@ -13,8 +13,17 @@ Tareas añadidas por Claude (setup del proyecto):
  * [HECHO] Inicializar proyecto: React + Vite + TypeScript + Tailwind CSS v4
  * [HECHO] Integrar Supabase (cliente + hook de auth: email/password + Google OAuth)
  * [HECHO] Crear componentes reutilizables base (Button, TextField) mobile-first
- * [HECHO] Configurar fuentes de Google (Gravitas One / Playfair Display / Space Mono)
+ * [HECHO] Configurar fuentes de Google (Jacquard 24 / Playfair Display / Space Mono)
  * [HECHO] README y .env.example con instrucciones de setup de Supabase
+
+Tareas añadidas por Claude (branding / logo):
+ * [HECHO] Establecer el logo principal (Sol de Mayo pixel-art) e implementarlo en la
+   login: emblema del Sol recoloreado al ink de marca (#3B3A4E) como asset
+   (src/assets/vox-austral-sol.svg) y favicon (public/favicon.svg).
+ * [HECHO] Cambiar la tipografía del título de Gravitas One a Jacquard 24 (index.html +
+   token --font-display en src/index.css).
+ * [HECHO] Render del título "Vox Austral" como texto real con la fuente Jacquard 24
+   (en vez de imagen), con el emblema del Sol arriba.
 
 Pendiente (requiere acción tuya):
  * [TODO] Crear el proyecto en Supabase y cargar VITE_SUPABASE_URL y

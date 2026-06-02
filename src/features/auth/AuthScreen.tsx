@@ -3,6 +3,7 @@ import { Button } from '@/components/Button'
 import { TextField } from '@/components/TextField'
 import { useAuth } from './useAuth'
 import type { AuthMode } from './auth.types'
+import solUrl from '@/assets/vox-austral-sol.svg'
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
@@ -90,10 +91,17 @@ export function AuthScreen() {
       <div className="relative z-10 mx-auto flex w-full max-w-sm flex-1 flex-col">
         {/* Title */}
         <header className="mt-6 mb-8 text-center">
-          <h1 className="font-display text-5xl leading-tight text-ink">
+          <img
+            src={solUrl}
+            alt=""
+            aria-hidden
+            className="mx-auto mb-4 w-20 select-none"
+            draggable={false}
+          />
+          <h1 className="font-display text-6xl leading-none text-ink">
             Vox<br />Austral
           </h1>
-          <p className="mt-3 font-mono text-sm text-ink-muted">
+          <p className="mt-4 font-mono text-sm text-ink-muted">
             Tu aventura austral comienza acá.
           </p>
         </header>

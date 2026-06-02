@@ -1,4 +1,8 @@
-# Vox Austral
+<p align="center">
+  <img src="logos/vox-austral-sol.svg" alt="Vox Austral" width="140" />
+</p>
+
+<h1 align="center">Vox Austral</h1>
 
 A pixel-art adventure game, playable 100% from the browser and built mobile-first.
 The UI is in Argentine Spanish; the codebase is in English.
@@ -15,7 +19,7 @@ The UI is in Argentine Spanish; the codebase is in English.
 
 - **Palette:** see `src/theme/colors.ts` (pastel / soft, friendly aesthetic).
 - **Typography (Google Fonts):**
-  - `Gravitas One` — game title only (`font-display`)
+  - `Jacquard 24` — game title only (`font-display`)
   - `Playfair Display` — UI titles & subtitles (`font-serif`)
   - `Space Mono` — in-game text: dialogue, missions (`font-mono`)
 
