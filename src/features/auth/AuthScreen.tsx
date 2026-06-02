@@ -95,10 +95,10 @@ export function AuthScreen() {
             src={solUrl}
             alt=""
             aria-hidden
-            className="mx-auto mb-4 w-20 select-none"
+            className="mx-auto -mb-1 w-20 select-none"
             draggable={false}
           />
-          <h1 className="font-display text-6xl leading-none text-ink">
+          <h1 className="font-display text-6xl leading-[0.85] text-ink">
             Vox<br />Austral
           </h1>
           <p className="mt-4 font-mono text-sm text-ink-muted">
