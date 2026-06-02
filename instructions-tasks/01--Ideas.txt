@@ -1,0 +1,25 @@
+01- Ideas
+
+# Idea base:
+ * Nobre del juego: Vox Austral
+ * Juego estilo pixel-art
+ * 100% usable desde un navegador
+ * Login con google o creando tu cuenta con tu correo
+ * Se define el lenguaje de programación y herramientas mas adecuadas para el
+   proyecto. no tengo preferencia sobre ninguna.
+ * Por ahora el juego tiene que estar 100% en español argentino. se pueden
+   incluir palabras especificas del lenguaje argentino, pero no tan extremo.
+ * es muy probable que la mayoría de usuarios usen la app desde el mobil, por lo
+   que tendría que estar enfocado SIEMPRE a una UI para el teléfono.
+
+
+# UI / Componentes
+ * Tipografía para el título del juego (Vox Austral) - en google fonts. Gravitas
+   One
+ * Estética con colores pasteles o suaves y "amigable" a la vista
+ * Se define una paleta de colores para la UI general del juego, la interfaz y
+   se guarda en la memoria esos colores para usarlos siempre en todos los
+   componentes.
+ * Se definen dos tipografías:1 - Serif para títulos / subtítulos2 - Monospaced
+   para el texto del jugeo (dialogos de personajes, misiones, etc)
+

@@ -1,0 +1,52 @@
+@import 'tailwindcss';
+
+/*
+ * Vox Austral design tokens.
+ * Single source of truth for the palette lives in src/theme/colors.ts;
+ * these @theme variables mirror it so Tailwind generates utility classes
+ * (bg-bg, text-ink, font-display, etc.). Keep both in sync.
+ */
+@theme {
+  /* Palette */
+  --color-bg: #f7f3ee;
+  --color-surface: #fffdfb;
+  --color-primary: #6ec1b8;
+  --color-primary-dark: #4fa89e;
+  --color-secondary: #f0a99e;
+  --color-accent: #f4d58d;
+  --color-lilac: #c3b1e1;
+  --color-ink: #3b3a4e;
+  --color-ink-muted: #7a7689;
+  --color-border: #e7dfd4;
+  --color-success: #9dcba0;
+  --color-error: #e89b9b;
+
+  /* Typography */
+  --font-display: 'Gravitas One', serif;
+  --font-serif: 'Playfair Display', serif;
+  --font-mono: 'Space Mono', monospace;
+}
+
+html,
+body,
+#root {
+  min-height: 100svh;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-serif);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Prevent iOS from zooming when focusing inputs (font-size must be >= 16px). */
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+}
