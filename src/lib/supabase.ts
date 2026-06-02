@@ -17,4 +17,13 @@ if (!isSupabaseConfigured) {
   )
 }
 
-export const supabase = createClient(supabaseUrl ?? '', supabaseAnonKey ?? '')
+// In demo mode we still construct a client (createClient throws on empty
+// values), but with harmless placeholders. Its methods are never called because
+// useAuth short-circuits when isSupabaseConfigured is false.
+const DEMO_URL = 'http://localhost:54321'
+const DEMO_KEY = 'demo-anon-key'
+
+export const supabase = createClient(
+  supabaseUrl || DEMO_URL,
+  supabaseAnonKey || DEMO_KEY,
+)
